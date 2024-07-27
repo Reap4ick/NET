@@ -1,9 +1,11 @@
-﻿@model WebHalk.Models.Categories.CategoryCreateViewModel
+﻿@model WebHalk.Models.Categories.CategoryEditViewModel
 
 <div class="container">
-    <h2>Додати нову категорію</h2>
+    <h2>Редагувати категорію</h2>
 
-    <form asp-action="Create" method="post" enctype="multipart/form-data">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
         <div class="form-group">
             <label for="Name">Назва</label>
             <input type="text" class="form-control" id="Name" name="Name" asp-for="Name" />
@@ -38,7 +40,7 @@
             <span asp-validation-for="ImageFile" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary">Додати</button>
+        <button type="submit" class="btn btn-primary">Зберегти</button>
     </form>
 </div>
 

@@ -2,8 +2,10 @@
 
 namespace WebHalk.Models.Categories
 {
-    public class CategoryCreateViewModel
+    public class CategoryEditViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         public string Name { get; set; } = string.Empty;
 
